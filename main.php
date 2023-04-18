@@ -1,3 +1,10 @@
 <?php declare(strict_types=1);
 
-//fs
+use App\Application;
+
+require_once 'vendor/autoload.php';
+
+$app = new Application();
+
+$app->run();
+
