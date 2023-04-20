@@ -1,10 +1,15 @@
 <?php declare(strict_types=1);
 
-use App\Application;
-
 require_once 'vendor/autoload.php';
 
-$app = new Application();
+$apiClient = new \App\ApiClient();
 
-$app->run();
+$amount = (float) readline('Input amount: ');
+$currencyName = readline('Input currency: ');
+
+echo PHP_EOL;
+
+echo 'Result ' . $apiClient->convert($amount, $currencyName);
+
+
 
